@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2330qsa5pe4l"]
+
+[ext_resource type="PackedScene" uid="uid://cpjpu60ybs6se" path="res://Assets/Scenes/world.tscn" id="1_vitoo"]
+[ext_resource type="PackedScene" uid="uid://d0er78sf3bsxx" path="res://Assets/Scenes/player.tscn" id="2_smtoa"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("2_smtoa")]
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.10705, 2.53985, 0)
+fov = 90.0
+
+[node name="World" parent="." instance=ExtResource("1_vitoo")]

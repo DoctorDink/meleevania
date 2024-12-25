@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpjpu60ybs6se"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5cf0v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqre2"]
+albedo_color = Color(0.23, 0.23, 0.23, 1)
+
+[node name="World" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0982418, 0.160074, -0.0817149)
+shape = SubResource("WorldBoundaryShape3D_5cf0v")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49318, 0)
+size = Vector3(22, 1, 22)
+material = SubResource("StandardMaterial3D_oqre2")
